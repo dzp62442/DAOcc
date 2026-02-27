@@ -1,17 +1,12 @@
-# mmcv-full 安装需要指定额外的索引链接
-mmcv-full==1.4.0 --find-links https://download.openmmlab.com/mmcv/dist/cu113/torch1.10.0/index.html
-
-# 其他常规依赖
-mmdet==2.20.0
+mmdet==2.28.2
 nuscenes-devkit==1.1.11
 torchpack==0.3.1
-numba==0.48.0
+numba==0.51.0  # 原文档 0.48.0 对 Python 3.8 支持不完整
 numpy==1.22.0
 prettytable==3.11.0
 ninja==1.11.1.1
 einops==0.8.0
 yapf==0.40.0
 pillow==8.4.0
-mpi4py==3.0.3
 Shapely==1.7.1
 

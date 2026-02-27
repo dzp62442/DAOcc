@@ -118,10 +118,10 @@ int pts_in_boxes3d_cpu(at::Tensor pts, at::Tensor boxes3d, at::Tensor pts_flag, 
     long boxes_num = boxes3d.size(0);
     long pts_num = pts.size(0);
 
-    int * pts_flag_flat = pts_flag.data<int>();
-    float * pts_flat = pts.data<float>();
-    float * boxes3d_flat = boxes3d.data<float>();
-    float * reg_target_flat = reg_target.data<float>();
+    int * pts_flag_flat = pts_flag.data_ptr<int>();
+    float * pts_flat = pts.data_ptr<float>();
+    float * boxes3d_flat = boxes3d.data_ptr<float>();
+    float * reg_target_flat = reg_target.data_ptr<float>();
 
 //    memset(assign_idx_flat, -1, boxes_num * pts_num * sizeof(int));
 //    memset(reg_target_flat, 0, pts_num * sizeof(float));
