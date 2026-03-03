@@ -9,4 +9,4 @@ einops==0.8.0
 yapf==0.40.0
 pillow==8.4.0
 Shapely==1.7.1
-
+trimesh

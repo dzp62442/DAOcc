@@ -1,3 +1,20 @@
+## 推理
+```shell
+python tools/test.py \
+    configs/nuscenes/occ3d/daocc_occ3d_nus_w_mask.yaml \
+    checkpoints/daocc_occ3d_nus_w_mask.pth
+```
+
+## 训练
+```shell
+python tools/train.py \
+    configs/nuscenes/occ3d/daocc_occ3d_nus_w_mask.yaml \
+    --run-dir ./work_dirs/daocc_w_mask \
+    --model.encoders.camera.backbone.init_cfg.checkpoint checkpoints/htc_r50_backbone.pth
+```
+
+---
+
 # Train and Test
 
 **Prerequisites**
