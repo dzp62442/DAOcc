@@ -1,3 +1,21 @@
+# 环境配置
+
+```bash
+conda create -n daocc python=3.8 -y
+conda activate daocc
+
+pip install torch==1.13.1+cu117 torchvision==0.14.1+cu117 -f https://download.pytorch.org/whl/torch_stable.html
+
+pip install mmcv-full==1.7.2 -f https://download.openmmlab.com/mmcv/dist/cu117/torch1.13.0/index.html
+
+pip install -r requirements.txt
+
+FORCE_CUDA=1 python setup.py develop
+```
+
+
+---
+
 # Step-by-step installation instructions
 
 **a. Create a conda virtual environment and activate it.**
