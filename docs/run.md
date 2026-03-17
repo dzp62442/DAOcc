@@ -1,14 +1,22 @@
 ## 推理
 ```shell
-python tools/test.py \
+CUDA_VISIBLE_DEVICES=0python tools/test.py \
     configs/nuscenes/occ3d/daocc_occ3d_nus_w_mask.yaml \
     checkpoints/daocc_occ3d_nus_w_mask.pth
 ```
 
 ## 训练
 ```shell
-python tools/train.py \
+CUDA_VISIBLE_DEVICES=0 python tools/train.py \
     configs/nuscenes/occ3d/daocc_occ3d_nus_w_mask.yaml \
+    --run-dir ./work_dirs/daocc_w_mask \
+    --model.encoders.camera.backbone.init_cfg.checkpoint checkpoints/htc_r50_backbone.pth
+```
+
+```shell
+CUDA_VISIBLE_DEVICES=0,1,2,3 bash tools/dist_train.sh \
+    configs/nuscenes/occ3d/daocc_occ3d_nus_w_mask.yaml \
+    4 \
     --run-dir ./work_dirs/daocc_w_mask \
     --model.encoders.camera.backbone.init_cfg.checkpoint checkpoints/htc_r50_backbone.pth
 ```

@@ -10,7 +10,7 @@ pip install mmcv-full==1.7.2 -f https://download.openmmlab.com/mmcv/dist/cu117/t
 
 pip install -r requirements.txt
 
-FORCE_CUDA=1 python setup.py develop
+MAX_JOBS=8 FORCE_CUDA=1 python setup.py develop
 ```
 
 
